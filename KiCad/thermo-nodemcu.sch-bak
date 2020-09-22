@@ -1,0 +1,891 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text GLabel 3700 5000 2    50   Input ~ 0
+SCL
+Text GLabel 3700 5100 2    50   Input ~ 0
+SDA
+$Comp
+L power:GND #PWR02
+U 1 1 5F4FF774
+P 1850 6200
+F 0 "#PWR02" H 1850 5950 50  0001 C CNN
+F 1 "GND" H 1855 6027 50  0000 C CNN
+F 2 "" H 1850 6200 50  0001 C CNN
+F 3 "" H 1850 6200 50  0001 C CNN
+	1    1850 6200
+	0    1    1    0   
+$EndComp
+Text GLabel 1200 2800 0    50   Input ~ 0
+VIN_WIRE
+Text GLabel 3700 5800 2    50   Input ~ 0
+relay_ac
+Text GLabel 3700 5700 2    50   Input ~ 0
+relay_heat
+Text GLabel 3700 5600 2    50   Input ~ 0
+relay_fan
+$Comp
+L Connector:Screw_Terminal_01x02 J1
+U 1 1 5F67849E
+P 1400 2800
+F 0 "J1" H 1480 2792 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 1480 2701 50  0000 L CNN
+F 2 "TerminalBlock_Altech:Altech_AK300_1x02_P5.00mm_45-Degree" H 1400 2800 50  0001 C CNN
+F 3 "~" H 1400 2800 50  0001 C CNN
+	1    1400 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5F687E2A
+P 1200 2900
+F 0 "#PWR0101" H 1200 2650 50  0001 C CNN
+F 1 "GND" V 1205 2772 50  0000 R CNN
+F 2 "" H 1200 2900 50  0001 C CNN
+F 3 "" H 1200 2900 50  0001 C CNN
+	1    1200 2900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5300 5150 5950 5150
+Wire Wire Line
+	5300 2050 5950 2050
+Wire Wire Line
+	5300 3600 5950 3600
+$Comp
+L Isolator:PC817 U5
+U 1 1 5F63A351
+P 6250 5050
+F 0 "U5" H 6250 5375 50  0000 C CNN
+F 1 "PC817" H 6250 5284 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm" H 6050 4850 50  0001 L CIN
+F 3 "http://www.soselectronic.cz/a_info/resource/d/pc817.pdf" H 6250 5050 50  0001 L CNN
+	1    6250 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R9
+U 1 1 5F63A357
+P 5750 4800
+F 0 "R9" H 5818 4846 50  0000 L CNN
+F 1 "1k" V 5818 4755 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5790 4790 50  0001 C CNN
+F 3 "~" H 5750 4800 50  0001 C CNN
+	1    5750 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 4950 5750 4950
+Wire Wire Line
+	5750 4650 5750 4250
+Wire Wire Line
+	5750 4250 6550 4250
+Wire Wire Line
+	5750 4250 5300 4250
+Connection ~ 5750 4250
+Text GLabel 5300 5150 0    50   Input ~ 0
+relay_fan
+Text GLabel 5300 3600 0    50   Input ~ 0
+relay_heat
+Text GLabel 5300 4250 0    50   Input ~ 0
+VCC
+Connection ~ 6550 4250
+Connection ~ 7350 4250
+Wire Wire Line
+	6550 4250 7350 4250
+Wire Wire Line
+	6550 4950 6550 4250
+Wire Wire Line
+	8700 4650 9000 4650
+Wire Wire Line
+	8700 4250 8700 4650
+Wire Wire Line
+	8350 4250 8700 4250
+Wire Wire Line
+	8800 4450 9000 4450
+Wire Wire Line
+	8800 4150 8800 4450
+Wire Wire Line
+	8150 4150 8800 4150
+Wire Wire Line
+	8150 4250 8150 4150
+Wire Wire Line
+	8650 4550 9000 4550
+Wire Wire Line
+	8650 4850 8650 4550
+Wire Wire Line
+	8250 4850 8650 4850
+Wire Wire Line
+	7350 4700 7350 4850
+Wire Wire Line
+	7350 4400 7350 4250
+Wire Wire Line
+	7350 4250 7850 4250
+Wire Wire Line
+	7350 4850 7350 4950
+Connection ~ 7350 4850
+Wire Wire Line
+	7850 4850 7350 4850
+$Comp
+L Diode:1N5822 D7
+U 1 1 5F63A388
+P 7350 4550
+F 0 "D7" V 7304 4630 50  0000 L CNN
+F 1 "1N5822" V 7395 4630 50  0000 L CNN
+F 2 "Diode_THT:D_DO-201AD_P15.24mm_Horizontal" H 7350 4375 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88526/1n5820.pdf" H 7350 4550 50  0001 C CNN
+	1    7350 4550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6650 5150 6550 5150
+Wire Wire Line
+	7050 5150 6950 5150
+Wire Wire Line
+	7350 5450 7350 5350
+$Comp
+L power:GND #PWR06
+U 1 1 5F63A37F
+P 7350 5450
+F 0 "#PWR06" H 7350 5200 50  0001 C CNN
+F 1 "GND" H 7355 5277 50  0000 C CNN
+F 2 "" H 7350 5450 50  0001 C CNN
+F 3 "" H 7350 5450 50  0001 C CNN
+	1    7350 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R12
+U 1 1 5F63A379
+P 6800 5150
+F 0 "R12" V 6868 5196 50  0000 L CNN
+F 1 "510" V 6868 5105 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6840 5140 50  0001 C CNN
+F 3 "~" H 6800 5150 50  0001 C CNN
+	1    6800 5150
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:BC337 Q3
+U 1 1 5F63A373
+P 7250 5150
+F 0 "Q3" H 7441 5196 50  0000 L CNN
+F 1 "BC337" H 7441 5105 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 7450 5075 50  0001 L CIN
+F 3 "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bc337.pdf" H 7250 5150 50  0001 L CNN
+	1    7250 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x03 J5
+U 1 1 5F63A36D
+P 9200 4550
+F 0 "J5" H 9280 4592 50  0000 L CNN
+F 1 "Screw_Terminal_01x03" H 9280 4501 50  0000 L CNN
+F 2 "TerminalBlock_Altech:Altech_AK300_1x03_P5.00mm_45-Degree" H 9200 4550 50  0001 C CNN
+F 3 "~" H 9200 4550 50  0001 C CNN
+	1    9200 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Relay:SANYOU_SRD_Form_C K3
+U 1 1 5F63A367
+P 8050 4550
+F 0 "K3" H 8480 4596 50  0000 L CNN
+F 1 "fan relay" V 8480 4505 50  0000 R CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 8500 4500 50  0001 L CNN
+F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 8050 4550 50  0001 C CNN
+	1    8050 4550
+	1    0    0    -1  
+$EndComp
+Text GLabel 5300 2700 0    50   Input ~ 0
+VCC
+Connection ~ 5750 2700
+Wire Wire Line
+	5750 2700 5300 2700
+Connection ~ 6550 2700
+Wire Wire Line
+	5750 2700 6550 2700
+Wire Wire Line
+	5750 3100 5750 2700
+Connection ~ 7350 2700
+Wire Wire Line
+	6550 2700 7350 2700
+Wire Wire Line
+	6550 3400 6550 2700
+Wire Wire Line
+	8700 3100 9000 3100
+Wire Wire Line
+	8700 2700 8700 3100
+Wire Wire Line
+	8350 2700 8700 2700
+Wire Wire Line
+	8800 2900 9000 2900
+Wire Wire Line
+	8800 2600 8800 2900
+Wire Wire Line
+	8150 2600 8800 2600
+Wire Wire Line
+	8150 2700 8150 2600
+Wire Wire Line
+	8650 3000 9000 3000
+Wire Wire Line
+	8650 3300 8650 3000
+Wire Wire Line
+	8250 3300 8650 3300
+Wire Wire Line
+	7350 3150 7350 3300
+Wire Wire Line
+	7350 2850 7350 2700
+Wire Wire Line
+	7350 2700 7850 2700
+Wire Wire Line
+	7350 3300 7350 3400
+Connection ~ 7350 3300
+Wire Wire Line
+	7850 3300 7350 3300
+$Comp
+L Diode:1N5822 D6
+U 1 1 5F60DB87
+P 7350 3000
+F 0 "D6" V 7304 3080 50  0000 L CNN
+F 1 "1N5822" V 7395 3080 50  0000 L CNN
+F 2 "Diode_THT:D_DO-201AD_P15.24mm_Horizontal" H 7350 2825 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88526/1n5820.pdf" H 7350 3000 50  0001 C CNN
+	1    7350 3000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6650 3600 6550 3600
+Wire Wire Line
+	7050 3600 6950 3600
+Wire Wire Line
+	7350 3900 7350 3800
+$Comp
+L power:GND #PWR05
+U 1 1 5F60DB7E
+P 7350 3900
+F 0 "#PWR05" H 7350 3650 50  0001 C CNN
+F 1 "GND" H 7355 3727 50  0000 C CNN
+F 2 "" H 7350 3900 50  0001 C CNN
+F 3 "" H 7350 3900 50  0001 C CNN
+	1    7350 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R11
+U 1 1 5F60DB78
+P 6800 3600
+F 0 "R11" V 6868 3646 50  0000 L CNN
+F 1 "510" V 6868 3555 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6840 3590 50  0001 C CNN
+F 3 "~" H 6800 3600 50  0001 C CNN
+	1    6800 3600
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:BC337 Q2
+U 1 1 5F60DB72
+P 7250 3600
+F 0 "Q2" H 7441 3646 50  0000 L CNN
+F 1 "BC337" H 7441 3555 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 7450 3525 50  0001 L CIN
+F 3 "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bc337.pdf" H 7250 3600 50  0001 L CNN
+	1    7250 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x03 J4
+U 1 1 5F60DB6C
+P 9200 3000
+F 0 "J4" H 9280 3042 50  0000 L CNN
+F 1 "Screw_Terminal_01x03" H 9280 2951 50  0000 L CNN
+F 2 "TerminalBlock_Altech:Altech_AK300_1x03_P5.00mm_45-Degree" H 9200 3000 50  0001 C CNN
+F 3 "~" H 9200 3000 50  0001 C CNN
+	1    9200 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Relay:SANYOU_SRD_Form_C K2
+U 1 1 5F60DB66
+P 8050 3000
+F 0 "K2" H 8480 3046 50  0000 L CNN
+F 1 "heat relay" V 8480 2955 50  0000 R CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 8500 2950 50  0001 L CNN
+F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 8050 3000 50  0001 C CNN
+	1    8050 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 3400 5750 3400
+$Comp
+L Device:R_US R8
+U 1 1 5F60DB56
+P 5750 3250
+F 0 "R8" H 5818 3296 50  0000 L CNN
+F 1 "1k" V 5818 3205 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5790 3240 50  0001 C CNN
+F 3 "~" H 5750 3250 50  0001 C CNN
+	1    5750 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Isolator:PC817 U4
+U 1 1 5F60DB50
+P 6250 3500
+F 0 "U4" H 6250 3825 50  0000 C CNN
+F 1 "PC817" H 6250 3734 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm" H 6050 3300 50  0001 L CIN
+F 3 "http://www.soselectronic.cz/a_info/resource/d/pc817.pdf" H 6250 3500 50  0001 L CNN
+	1    6250 3500
+	1    0    0    -1  
+$EndComp
+Text GLabel 5300 1150 0    50   Input ~ 0
+VCC
+Connection ~ 5750 1150
+Wire Wire Line
+	5750 1150 5300 1150
+Connection ~ 6550 1150
+Wire Wire Line
+	5750 1150 6550 1150
+Wire Wire Line
+	5750 1550 5750 1150
+Connection ~ 7350 1150
+Wire Wire Line
+	6550 1150 7350 1150
+Wire Wire Line
+	6550 1850 6550 1150
+Wire Wire Line
+	8700 1550 9000 1550
+Wire Wire Line
+	8700 1150 8700 1550
+Wire Wire Line
+	8350 1150 8700 1150
+Wire Wire Line
+	8800 1350 9000 1350
+Wire Wire Line
+	8800 1050 8800 1350
+Wire Wire Line
+	8150 1050 8800 1050
+Wire Wire Line
+	8150 1150 8150 1050
+Wire Wire Line
+	8650 1450 9000 1450
+Wire Wire Line
+	8650 1750 8650 1450
+Wire Wire Line
+	8250 1750 8650 1750
+Wire Wire Line
+	7350 1600 7350 1750
+Wire Wire Line
+	7350 1300 7350 1150
+Wire Wire Line
+	7350 1150 7850 1150
+Wire Wire Line
+	7350 1750 7350 1850
+Connection ~ 7350 1750
+Wire Wire Line
+	7850 1750 7350 1750
+$Comp
+L Diode:1N5822 D5
+U 1 1 5F5E4CC5
+P 7350 1450
+F 0 "D5" V 7304 1530 50  0000 L CNN
+F 1 "1N5822" V 7395 1530 50  0000 L CNN
+F 2 "Diode_THT:D_DO-201AD_P15.24mm_Horizontal" H 7350 1275 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88526/1n5820.pdf" H 7350 1450 50  0001 C CNN
+	1    7350 1450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6650 2050 6550 2050
+Wire Wire Line
+	7050 2050 6950 2050
+Wire Wire Line
+	7350 2350 7350 2250
+$Comp
+L power:GND #PWR04
+U 1 1 5F5DCDB9
+P 7350 2350
+F 0 "#PWR04" H 7350 2100 50  0001 C CNN
+F 1 "GND" H 7355 2177 50  0000 C CNN
+F 2 "" H 7350 2350 50  0001 C CNN
+F 3 "" H 7350 2350 50  0001 C CNN
+	1    7350 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R10
+U 1 1 5F5D812F
+P 6800 2050
+F 0 "R10" V 6868 2096 50  0000 L CNN
+F 1 "510" V 6868 2005 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6840 2040 50  0001 C CNN
+F 3 "~" H 6800 2050 50  0001 C CNN
+	1    6800 2050
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:BC337 Q1
+U 1 1 5F5D2150
+P 7250 2050
+F 0 "Q1" H 7441 2096 50  0000 L CNN
+F 1 "BC337" H 7441 2005 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 7450 1975 50  0001 L CIN
+F 3 "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bc337.pdf" H 7250 2050 50  0001 L CNN
+	1    7250 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x03 J3
+U 1 1 5F5D0A3F
+P 9200 1450
+F 0 "J3" H 9280 1492 50  0000 L CNN
+F 1 "Screw_Terminal_01x03" H 9280 1401 50  0000 L CNN
+F 2 "TerminalBlock_Altech:Altech_AK300_1x03_P5.00mm_45-Degree" H 9200 1450 50  0001 C CNN
+F 3 "~" H 9200 1450 50  0001 C CNN
+	1    9200 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Relay:SANYOU_SRD_Form_C K1
+U 1 1 5F5CE8C9
+P 8050 1450
+F 0 "K1" H 8480 1496 50  0000 L CNN
+F 1 "ac relay" V 8480 1405 50  0000 R CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 8500 1400 50  0001 L CNN
+F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 8050 1450 50  0001 C CNN
+	1    8050 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 1850 5750 1850
+Text GLabel 5300 2050 0    50   Input ~ 0
+relay_ac
+$Comp
+L Device:R_US R7
+U 1 1 5F5C088E
+P 5750 1700
+F 0 "R7" H 5818 1746 50  0000 L CNN
+F 1 "1k" V 5818 1655 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5790 1690 50  0001 C CNN
+F 3 "~" H 5750 1700 50  0001 C CNN
+	1    5750 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Isolator:PC817 U3
+U 1 1 5F5BC143
+P 6250 1950
+F 0 "U3" H 6250 2275 50  0000 C CNN
+F 1 "PC817" H 6250 2184 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm" H 6050 1750 50  0001 L CIN
+F 3 "http://www.soselectronic.cz/a_info/resource/d/pc817.pdf" H 6250 1950 50  0001 L CNN
+	1    6250 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L esp8266:NodeMCU_1.0_(ESP-12E) U2
+U 1 1 5F5C96D0
+P 2900 5600
+F 0 "U2" H 2900 6793 60  0000 C CNN
+F 1 "NodeMCU_1.0_(ESP-12E)" H 2900 6687 60  0000 C CNN
+F 2 "ESP8266:NodeMCU1.0(12-E)" H 2900 6581 60  0000 C CNN
+F 3 "" H 2300 4750 60  0000 C CNN
+	1    2900 5600
+	1    0    0    -1  
+$EndComp
+Text GLabel 2100 6300 0    50   Input ~ 0
+VCC
+Text GLabel 3700 6000 2    50   Input ~ 0
+SEL_BUTTON
+Text GLabel 2100 4900 0    50   Input ~ 0
+CHNGE_BUTTON
+NoConn ~ 3700 4900
+NoConn ~ 3700 5200
+NoConn ~ 3700 5300
+NoConn ~ 3700 5900
+NoConn ~ 3700 6100
+NoConn ~ 2100 6100
+NoConn ~ 2100 6000
+NoConn ~ 2100 5000
+NoConn ~ 2100 5100
+NoConn ~ 2100 5200
+NoConn ~ 2100 5300
+NoConn ~ 2100 5400
+NoConn ~ 2100 5500
+NoConn ~ 2100 5600
+NoConn ~ 2100 5700
+Wire Wire Line
+	1850 6200 2100 6200
+$Comp
+L Switch:SW_Push SW1
+U 1 1 5F5A275A
+P 3750 3050
+F 0 "SW1" H 3750 3335 50  0000 C CNN
+F 1 "SW_Push" H 3750 3244 50  0000 C CNN
+F 2 "Connector_PinSocket_1.27mm:PinSocket_2x02_P1.27mm_Vertical" H 3750 3250 50  0001 C CNN
+F 3 "~" H 3750 3250 50  0001 C CNN
+	1    3750 3050
+	1    0    0    -1  
+$EndComp
+Text GLabel 3450 3600 0    50   Input ~ 0
+CHNGE_BUTTON
+Text GLabel 3400 3050 0    50   Input ~ 0
+SEL_BUTTON
+$Comp
+L power:GND #PWR0102
+U 1 1 5F5AC5A7
+P 3950 3600
+F 0 "#PWR0102" H 3950 3350 50  0001 C CNN
+F 1 "GND" H 3955 3427 50  0000 C CNN
+F 2 "" H 3950 3600 50  0001 C CNN
+F 3 "" H 3950 3600 50  0001 C CNN
+	1    3950 3600
+	0    -1   1    0   
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5F5AFF8D
+P 3950 3050
+F 0 "#PWR0103" H 3950 2800 50  0001 C CNN
+F 1 "GND" H 3955 2877 50  0000 C CNN
+F 2 "" H 3950 3050 50  0001 C CNN
+F 3 "" H 3950 3050 50  0001 C CNN
+	1    3950 3050
+	0    -1   1    0   
+$EndComp
+$Comp
+L power:+3.3V #PWR0104
+U 1 1 5F5C1232
+P 3300 2900
+F 0 "#PWR0104" H 3300 2750 50  0001 C CNN
+F 1 "+3.3V" H 3315 3073 50  0000 C CNN
+F 2 "" H 3300 2900 50  0001 C CNN
+F 3 "" H 3300 2900 50  0001 C CNN
+	1    3300 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0105
+U 1 1 5F5C1EC1
+P 3300 3450
+F 0 "#PWR0105" H 3300 3300 50  0001 C CNN
+F 1 "+3.3V" H 3315 3623 50  0000 C CNN
+F 2 "" H 3300 3450 50  0001 C CNN
+F 3 "" H 3300 3450 50  0001 C CNN
+	1    3300 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 3450 3550 3450
+Wire Wire Line
+	3550 3450 3550 3600
+Wire Wire Line
+	3450 3600 3550 3600
+Connection ~ 3550 3600
+Wire Wire Line
+	3300 2900 3550 2900
+Wire Wire Line
+	3550 2900 3550 3050
+Wire Wire Line
+	3400 3050 3550 3050
+Connection ~ 3550 3050
+Wire Notes Line
+	4300 4250 4300 6600
+Wire Notes Line
+	4300 6600 1350 6600
+Wire Notes Line
+	1350 6600 1350 4250
+Wire Notes Line
+	1350 4250 4300 4250
+Wire Notes Line
+	10350 5900 10350 700 
+Wire Notes Line
+	10350 700  4500 700 
+Wire Notes Line
+	4500 700  4500 5900
+Wire Notes Line
+	4500 5900 10350 5900
+Wire Notes Line
+	4300 2350 700  2350
+Wire Notes Line
+	4300 2600 4300 3850
+Wire Notes Line
+	4300 3850 2700 3850
+Wire Notes Line
+	2700 3850 2700 2600
+Wire Notes Line
+	2700 2600 4300 2600
+Wire Notes Line
+	700  3050 2400 3050
+Wire Notes Line
+	2400 2600 700  2600
+Wire Notes Line
+	2400 2600 2400 3050
+Wire Notes Line
+	700  2600 700  3050
+Wire Notes Line
+	1900 3900 700  3900
+Text Notes 700  2550 0    118  ~ 0
+Power Input
+Text Notes 2700 2550 0    118  ~ 0
+Push Buttons
+Text Notes 4500 650  0    118  ~ 0
+Relays; AC, Heat, Fan
+Text Notes 1350 4200 0    118  ~ 0
+NodeMCU 
+Wire Notes Line
+	700  700  4300 700 
+Wire Notes Line
+	700  2350 700  700 
+Wire Notes Line
+	4300 700  4300 2350
+Text GLabel 1200 1300 0    50   Input ~ 0
+VIN_WIRE
+$Comp
+L Device:CP1_Small Cin1
+U 1 1 5F508AF0
+P 1250 1550
+F 0 "Cin1" H 1159 1596 50  0000 R CNN
+F 1 "100uF" V 1159 1505 50  0000 R CNN
+F 2 "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm" H 1250 1550 50  0001 C CNN
+F 3 "~" H 1250 1550 50  0001 C CNN
+	1    1250 1550
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 1300 1250 1300
+Wire Wire Line
+	1250 1450 1250 1300
+Wire Wire Line
+	1250 1650 1250 1900
+Connection ~ 1250 1300
+Wire Wire Line
+	1250 1300 1600 1300
+Connection ~ 1600 1300
+Wire Wire Line
+	1850 1500 1850 1900
+$Comp
+L Device:C_Small C1
+U 1 1 5F51F274
+P 1600 1550
+F 0 "C1" V 1692 1596 50  0000 R CNN
+F 1 "100n" V 1692 1505 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 1600 1550 50  0001 C CNN
+F 3 "~" H 1600 1550 50  0001 C CNN
+	1    1600 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 1450 1600 1300
+Wire Wire Line
+	1950 1500 1850 1500
+Wire Wire Line
+	1600 1300 1950 1300
+$Comp
+L Regulator_Switching:LM2596S-ADJ U1
+U 1 1 5F501C4A
+P 2450 1400
+F 0 "U1" H 2450 1767 50  0000 C CNN
+F 1 "LM2596S-ADJ" H 2450 1676 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TO-263-5_TabPin3" H 2500 1150 50  0001 L CIN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2596.pdf" H 2450 1400 50  0001 C CNN
+	1    2450 1400
+	1    0    0    -1  
+$EndComp
+Connection ~ 1850 1900
+Wire Wire Line
+	1850 1900 2450 1900
+Wire Wire Line
+	1600 1900 1850 1900
+Wire Wire Line
+	3300 1900 3900 1900
+Wire Wire Line
+	3000 1050 3000 1300
+Wire Wire Line
+	3000 1050 3250 1050
+Wire Wire Line
+	3900 1050 3900 1500
+Wire Wire Line
+	3650 1050 3900 1050
+Wire Wire Line
+	3000 1900 3300 1900
+Connection ~ 3000 1900
+Wire Wire Line
+	3000 1850 3000 1900
+Wire Wire Line
+	2950 1500 3300 1500
+Wire Wire Line
+	3000 1550 3000 1300
+Wire Wire Line
+	2450 1900 3000 1900
+$Comp
+L Device:R_US R2
+U 1 1 5F51D3E3
+P 3000 1700
+F 0 "R2" H 3068 1746 50  0000 L CNN
+F 1 "330" V 3068 1655 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3040 1690 50  0001 C CNN
+F 3 "~" H 3000 1700 50  0001 C CNN
+	1    3000 1700
+	1    0    0    -1  
+$EndComp
+Connection ~ 3300 1900
+Connection ~ 3000 1300
+Connection ~ 3250 1050
+Wire Wire Line
+	3250 1050 3350 1050
+Wire Wire Line
+	3250 1200 3250 1050
+Wire Wire Line
+	3500 1200 3250 1200
+$Comp
+L Device:R_POT_US RV1
+U 1 1 5F51B70F
+P 3500 1050
+F 0 "RV1" V 3295 1050 50  0000 C CNN
+F 1 "10k" V 3386 1050 50  0000 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical" H 3500 1050 50  0001 C CNN
+F 3 "~" H 3500 1050 50  0001 C CNN
+	1    3500 1050
+	0    -1   1    0   
+$EndComp
+Connection ~ 1600 1900
+Wire Wire Line
+	1600 1650 1600 1900
+Wire Wire Line
+	1250 1900 1600 1900
+Wire Wire Line
+	3900 1600 3900 1500
+Wire Wire Line
+	3300 1500 3450 1500
+Connection ~ 3300 1500
+Wire Wire Line
+	3300 1550 3300 1500
+Wire Wire Line
+	3300 1850 3300 1900
+Wire Wire Line
+	3900 1900 3900 1800
+Wire Wire Line
+	3900 1500 4050 1500
+Connection ~ 2450 1900
+Wire Wire Line
+	2450 1900 2450 2000
+Wire Wire Line
+	2450 1900 2450 1700
+Connection ~ 3900 1500
+Wire Wire Line
+	3900 1500 3750 1500
+Wire Wire Line
+	2950 1300 3000 1300
+$Comp
+L Diode:1N5822 D1
+U 1 1 5F50CE4B
+P 3300 1700
+F 0 "D1" V 3254 1780 50  0000 L CNN
+F 1 "1N5822" V 3345 1780 50  0000 L CNN
+F 2 "Diode_THT:D_DO-201AD_P15.24mm_Horizontal" H 3300 1525 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88526/1n5820.pdf" H 3300 1700 50  0001 C CNN
+	1    3300 1700
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:L L1
+U 1 1 5F50AB5D
+P 3600 1500
+F 0 "L1" V 3790 1500 50  0000 C CNN
+F 1 "330uH" V 3699 1500 50  0000 C CNN
+F 2 "Inductor_SMD:L_0805_2012Metric" H 3600 1500 50  0001 C CNN
+F 3 "~" H 3600 1500 50  0001 C CNN
+	1    3600 1500
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:CP1_Small Cout1
+U 1 1 5F509A16
+P 3900 1700
+F 0 "Cout1" H 3991 1746 50  0000 L CNN
+F 1 "220uF" H 3991 1655 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 3900 1700 50  0001 C CNN
+F 3 "~" H 3900 1700 50  0001 C CNN
+	1    3900 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5F4ECA80
+P 2450 2000
+F 0 "#PWR01" H 2450 1750 50  0001 C CNN
+F 1 "GND" H 2455 1827 50  0000 C CNN
+F 2 "" H 2450 2000 50  0001 C CNN
+F 3 "" H 2450 2000 50  0001 C CNN
+	1    2450 2000
+	1    0    0    -1  
+$EndComp
+Text GLabel 4050 1500 2    50   Output ~ 0
+VCC
+Text Notes 700  650  0    118  ~ 0
+Step-down Converter
+Text Notes 700  3250 0    118  ~ 0
+LCD I2C Pins
+Wire Notes Line
+	700  3300 1900 3300
+Wire Notes Line
+	700  3900 700  3300
+Wire Notes Line
+	1900 3300 1900 3900
+Text GLabel 1050 3750 0    50   Input ~ 0
+VCC
+$Comp
+L power:GND #PWR03
+U 1 1 5F5B2610
+P 1050 3650
+F 0 "#PWR03" H 1050 3400 50  0001 C CNN
+F 1 "GND" V 1055 3522 50  0000 R CNN
+F 2 "" H 1050 3650 50  0001 C CNN
+F 3 "" H 1050 3650 50  0001 C CNN
+	1    1050 3650
+	0    1    -1   0   
+$EndComp
+Text GLabel 1050 3750 0    50   Input ~ 0
+VCC
+$Comp
+L Connector_Generic:Conn_01x04 J2
+U 1 1 5F5B1CD3
+P 1250 3550
+F 0 "J2" H 1330 3542 50  0000 L CNN
+F 1 "Conn_01x04" H 1330 3451 50  0000 L CNN
+F 2 "Connector_PinSocket_1.27mm:PinSocket_1x04_P1.27mm_Vertical" H 1250 3550 50  0001 C CNN
+F 3 "~" H 1250 3550 50  0001 C CNN
+	1    1250 3550
+	1    0    0    -1  
+$EndComp
+Text GLabel 1050 3450 0    50   Input ~ 0
+SDA
+Text GLabel 1050 3550 0    50   Input ~ 0
+SCL
+$Comp
+L Switch:SW_Push SW2
+U 1 1 5F5A33B2
+P 3750 3600
+F 0 "SW2" H 3750 3885 50  0000 C CNN
+F 1 "SW_Push" H 3750 3794 50  0000 C CNN
+F 2 "Connector_PinSocket_1.27mm:PinSocket_2x02_P1.27mm_Vertical" H 3750 3800 50  0001 C CNN
+F 3 "~" H 3750 3800 50  0001 C CNN
+	1    3750 3600
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
